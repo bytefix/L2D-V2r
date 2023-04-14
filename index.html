@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/svg+xml" href="./assets/img/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn2dance</title>
+    <link href="./assets/fonts/mohave.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="headline">
+      <div id="topic">
+        <h1>Learn2dance</h1>  
+        <p>digital Tanzen lernen</p>
+      </div>
+      <div id="scrollDown" onclick="document.getElementById('content').scrollIntoView({behavior: 'smooth'});">
+        <p>Alle Tänze</p>
+        <img src="./assets/img/arrows_down.svg">
+      </div>
+    </div>
+    <div id="content">
+      <div id="dynamic_list">
+        <div class ="dynamicListElement">
+          <a href="./figuren/?d=HipHop">
+            <img class="menu_image" src="./assets/img/hiphop.jpg" alt="">
+            <div class="image_overlay">
+              <p class="name">HipHop</p>
+            </div>
+          </a>
+        </div>
+        <div class ="dynamicListElement">
+          <a href="./figuren/?d=Shuffle">
+            <img class="menu_image" src="./assets/img/shuffle.png" alt="">
+            <div class="image_overlay">
+              <p class="name">Shuffle</p>
+            </div>
+          </a>
+        </div>
+        <div class ="dynamicListElement">  
+          <a href="./figuren/?d=Michael Jackson">
+            <img class="menu_image" src="./assets/img/michael_jackson.jpg" alt="">
+            <div class="image_overlay">
+              <p class="name">Michael Jackson</p>
+            </div>
+          </a>
+        </div>
+        <!-- <div class ="dynamicListElement">
+          <a href="./figuren/?d=Extras">
+            <img class="menu_image" src="./assets/img/burger.png" alt="">
+            <div class="image_overlay">
+              <p class="name">Extras</p>
+            </div>
+          </a>
+        </div> -->
+      </div>
+      <div id="bottom">
+        <div id="about">
+          <p><b>Jugend Forscht Projekt 2023<br>©2021-2023 ‮srellA sanoJ</b><br>‮moc.liamg[tä]srella.sanoj<br>Halepaghenschule Buxtehude<br>Konopkastraße 5, 21614 Buxtehude</p>
+        </div>
+        <div id="support">
+          <p>Mit Unterstütung durch:</p>
+          <img src="./assets/img/tanzhaus-logo.png">
+        </div>
+        <!-- <div id="below">
+        </div> -->
+      </div>
+    </div>
+  </body>
+</html>

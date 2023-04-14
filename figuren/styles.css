@@ -1,0 +1,233 @@
+/* SVG-Background from https://www.svgbackgrounds.com/ */
+
+@import "../assets/shared/colors.css";
+
+body, html {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+    font-family: "Mohave";
+    background-color: var(--white);
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+body{
+    background: url("../assets/img/bgSelect.svg");
+    background-position: top;
+    background-size: cover;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+img,
+a {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    text-decoration: none;
+}
+
+#headline{
+    position: relative;
+    max-height: 150px;
+    height: 25vmin;
+    width: 100%;
+    /* background: url("../assets/img/bgSelect.svg") no-repeat fixed; */
+}
+#tanzname {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: calc(4vh + 4vw);
+    color: var(--white);
+    text-shadow: 5px 5px rgba(121, 121, 121, 0.474);
+    width: 100%;
+}
+#backButton{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    height: 5vmax;
+    width: 35vmax;
+    background-color: var(--dark);
+    color: var(--white);
+    text-align: center;
+    font-size: 3vmax;
+    border-radius: 1vmax;
+    filter: drop-shadow(0px 0px 10px var(--dark));
+}
+#backButton > img {
+    transform: scaleX(-1);
+    filter: invert(1);
+    height: 100%;
+    position: relative;
+    float:left;
+}
+#backButton > span {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -36%);
+}
+
+#flexContainer{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    padding-bottom: 5vmax;
+    align-items: flex-start;
+}
+
+.flexItem{
+    position: relative;
+    filter: drop-shadow(0px 0px 10px var(--dark));
+    height: 35vmax;
+    width: 35vmax;
+    max-height: 400px;
+    max-width: 400px;
+    border-radius: 1vmax;
+    margin: 3vmax;
+}
+
+#canvas{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.renderDiv {
+    width: 100%;
+    height: 70%;
+    position: relative;
+    background-color: var(--white);
+    border-radius: 1vmax 1vmax 0px 0px;
+}
+
+
+.overlayNumber{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: var(--dark);
+    height: 4vmax;
+    width: 4vmax;
+    border-radius: calc(1vmax * 0.75);
+    z-index: 6;
+}
+
+.overlayNumber > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -46%);
+    text-align: center;
+    font-size: 2.5vmax;
+    color: var(--white);
+}
+
+.overlayDescription{
+    position: relative;
+    background-color: var(--dark);
+    width: 100%;
+    height: 30%;
+    border-radius: 0px 0px 1vmax 1vmax;
+    margin-top: -6px;
+}
+
+.overlayDescription > p {
+    padding: calc(0.1vh + 0.1vw) calc(0.5vh + 0.5vw);
+    font-size: 150%;
+    color: var(--white);
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.spinner{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    top: 0px;
+    background-color: var(--white);
+    border-radius: 1vmax 1vmax 0px 0px;
+    z-index: 0;
+}
+
+.spinner > div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2vmax;
+    height: 2vmax;
+}
+
+.spinner > div > div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: loadAnimation 2s ease-in-out infinite;
+}
+
+.spinner > div :nth-child(1){
+    background-color: var(--dark);
+    animation-delay: 200ms;
+}
+
+.spinner > div :nth-child(2){
+    background-color: #3F6877;
+    animation-delay: 100ms;
+}
+
+.spinner > div :nth-child(3){
+    background-color: var(--figure);
+    animation-delay: 0ms;
+}
+
+@keyframes loadAnimation{
+    0%,100%{
+        transform: translate(-20px,-20px) rotateZ(0deg);
+    }
+    25%{
+        transform: translate(20px,-20px) rotateZ(180deg);
+    }
+    50%{
+        transform: translate(20px,20px) rotateZ(0deg);
+    }
+    75%{
+        transform: translate(-20px,20px) rotateZ(180deg);
+    }
+}
+
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

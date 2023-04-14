@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../assets/shared/loading.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Viewer</title>
+    <link href="../assets/fonts/mohave.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="loading_screen">
+      <div id="animation_frame">
+        <div class="animation_line"><div></div></div>
+        <div class="animation_line"><div></div></div>
+        <div class="animation_line"><div></div></div>
+        <div class="animation_line"><div></div></div>
+        <h3 id="loading">Laden...</h3>
+      </div>
+    </div>
+    <div id="buttonWrap">
+      <div onclick="location.href = location.href.replace('/3D','/figuren')" id="backBtn" class="navButton">
+        <img src="../assets/img/arrow_right.svg">
+      </div>
+      <div onclick="location.href = location.href.replace('/3D','/3D/AugmentedReality')" id="arbutton" class="navButton">
+        <img src="../assets/img/ar.svg">
+      </div>
+      <div onclick="location.href = location.href.replace('/3D','/3D/aiAnalysis')" id="aibutton" class="navButton">
+        <img src="../assets/img/ailogo.svg">
+      </div>
+      <div id="fsbutton" class="navButton">
+        <img src="../assets/img/openFullscreen.svg">
+      </div>
+    </div>
+    <div id="progressBarOuter">
+      <div id="progressBarInner" style="width: 0;"></div>
+      <h1 id="description">...</h1>
+    </div>
+    <div class="speedSlider">
+      <p style="text-align: center; margin-bottom: 0px; transform: translateY(15px);">Geschwindigkeit</p>
+      <table style="width: 100%;">
+        <td>
+          <p style="text-align: right; margin: 0px 20px 0px 0px; transform: translate(15px,-5px)">0x</p>
+        </td>
+        <td>
+          <input type="range" min="0" max="100" value="100" class="slider" id="speedRange" >
+        </td>
+        <td>
+          <p style="text-align: left; margin: 0 0 0 20px; transform: translate(-15px,-5px)">1x</p>
+        </td>
+      </table> 
+    </div>
+    <canvas id ='3dspace'></canvas>
+    <script defer type="module" src="./main.js"></script>
+  </body>
+</html>

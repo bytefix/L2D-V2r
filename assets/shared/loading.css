@@ -1,0 +1,131 @@
+@import "./colors.css";
+
+#loading_screen {
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white);
+    pointer-events: all;
+    z-index: 3;
+}
+
+#loading{
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 250%);
+    position: absolute;
+    font-family: "Mohave";
+    animation: fadeIn 3s;
+}
+
+#animation_frame {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.animation_line {
+    animation: spin 1.5s cubic-bezier(0.5, 0, 0.5, 1) infinite, fadeIn 2s;
+    /* border-left: 5px solid; */
+    background-color: transparent;
+    border-top: 8px solid;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 100px;
+}
+
+.animation_line > div{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%,16px);
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border: 8px solid var(--white);
+    background-color: var(--white);
+}
+
+.animation_line:nth-child(1){
+    width: 100%;
+    height: 100%;
+    border-color: var(--first);
+    animation-delay: -150ms;
+    z-index: 1;
+}
+
+.animation_line:nth-child(2) {
+    width: 80%;
+    height: 80%;
+    border-color: var(--dark);
+    animation-delay: -300ms;
+    z-index: 2;
+}
+
+.animation_line:nth-child(3) {
+    width: 60%;
+    height: 60%;
+    border-color: var(--secound);
+    animation-delay: -450ms;
+    z-index: 3;
+}
+
+.animation_line:nth-child(4) {
+    width: 40%;
+    height: 40%;
+    border-color: var(--figure);
+    animation-delay: -600ms;
+    z-index: 4;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%,-50%) rotateZ(0deg);
+    }
+    100% {
+        transform: translate(-50%,-50%) rotateZ(1turn);
+    }
+}
+
+@keyframes fadeIn {
+    0%, 20% {
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+        display: none;
+        
+    }
+}
+
+#errorline{
+    font-family: "Mohave";
+    color: var(--dark);
+    position: relative;
+    font-size: 30px;
+    width: 90%;
+    top: 10%;
+    line-height: 0px;
+    transform: translateY(-50%);
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}

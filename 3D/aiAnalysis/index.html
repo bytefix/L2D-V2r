@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../../assets/shared/loading.css">
+    <link rel="icon" type="image/svg+xml" href="../../assets/img/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Analysis</title>
+    <link href="../../assets/fonts/mohave.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="overlays">
+      <div id="mainOverlay">
+        <div id="cornerRightTop">
+          <button id="stopBtn">
+            <img src="../../assets/img/stop.svg" alt="stopp">
+          </button>
+          <button id="preview">Vorschau</button>
+        </div> 
+        <div id="cornerLeftTop">
+          <button id="back" onclick="location.href = location.href.replace('/3D/aiAnalysis', '/3D')">
+            <img src="../../assets/img/arrow_right_colored.svg" alt="Zurück">
+          </button>
+          <button id="fsbutton">
+            <img src="../../assets/img/openFullscreen_colored.svg">
+          </button>
+          <button id="helpBtn">
+            <img src="../../assets/img/help_colored.svg">
+          </button>   
+        </div>
+      </div>
+      <div id="helpOverlay">
+        <div id="helpContent">
+          <button id="backFromHelp">
+            <img src="../../assets/img/arrow_right.svg" alt="Zurück">
+            <span>Zurück</span>
+          </button>
+          <h1>Anleitung</h1>
+          <ol>
+            <li>Positioniere dich so im Raum, dass dein ganzer Körper im Bild zu sehen ist</li>
+            <li>Stelle dich in die "T-Pose", wie es die 3D Figur von Vorne vormacht:
+              <ul>
+                <li>Füße Schulterbreit</li>
+                <li>Arme bilden mit den Schultern eine Waagerechte</li>
+                <li>Kopf gerade nach vorne</li>
+              </ul>
+            </li>
+            <li>Warte, bis die Kalibrierung abgeschlossen wurde</li>
+            <li>Mach die Bewegungen möglichst genau nach</li>
+            <li>Achte darauf, dass du deinen Platz nicht verlässt und keine weiteren Personen im Bild sind</li>
+          </ol>
+          <div class="settingsRange">
+            <p>Schwierigkeit</p>
+            <input type="range" min="1" max="7" value="4" id="slider_dif">
+            <div>
+              <span>Leicht</span>
+              <span>Schwer</span>
+            </div>
+          </div>
+          <div class="settingsRange">
+            <p>KI (erfordert Neuladen)</p>
+            <input type="range" min="0" max="1" value="0" id="slider_ai">
+            <div>
+              <span>"Ligthning" (Schneller)</span>
+              <span>"Thunder" (Genauer)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="loading_screen">
+        <div id="animation_frame">
+          <div class="animation_line"><div></div></div>
+          <div class="animation_line"><div></div></div>
+          <div class="animation_line"><div></div></div>
+          <div class="animation_line"><div></div></div>
+          <h3 id="loading">Laden...</h3>
+        </div>
+      </div>
+      <div id="startOverlay">
+        <div id="startOverlay_center">
+          <h1 id="startOverlay_num">1</h1>
+          <p id="startOverlay_kal"><b>Kalibrierung</b><br><i>bitte still halten!</i></p>
+        </div>
+      </div>
+    <div class="endOverlay" id="eo_full">
+      <div class="endOverlay" id="eo_main">
+        <h1 class="endOverlay" id="eo_title">_title</h1>
+        <div id="eo_info">
+          <p class="endOverlay" id="eo_info_general"></p>
+          <p class="endOverlay" id="eo_info_detail">Worauf du noch Achten musst:<br>- Dein Arm (60%)<br>- Zweites <br> - Deine Linke Schuler (80%)</p>
+        </div>
+        <div id="eo_canvas">
+          <canvas id="eo_dia"></canvas>
+        </div>
+      </div>
+      <div>
+        <button class="endOverlay" id="eo_btn">Weiter</button>
+      </div>
+    </div>
+    </div>
+    <div id="modelView">
+      <canvas id="canvas_3D"></canvas>
+      <div id="overlay_3d">
+        <p><b>✓</b> L-R Gespiegelt</p>
+        <div id="viewBtnOverlay">
+          <button id="right" class="viewBtn">Rechts</button>
+          <button id="front" class="viewBtn">Vorne</button>
+          <button id="left" class="viewBtn">Links</button>
+        </div>
+      </div>    
+    </div>
+    <div id="poseOutput">
+      <div id="videoDiv">
+        <video autoplay="true" id="videoInput"></video>
+        <canvas id="canvas_pose"></canvas>
+      </div>
+      <div id="feedbackDiv"> 
+        <div id="feedback_left">
+          <div id="gauge">
+            <div id="innerGauge"></div>
+          </div>
+          <div id="scoreFrame">
+            <p id="score">00%</p>
+            <p id="totalScore">Durchschnitt: 00%</p>
+          </div>
+        </div>
+        <div id="feedback_right">
+          <canvas id="diagramm"></canvas>
+          <div id="timeDiv">
+            <p id="time">00:00</p>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <script type="module" defer src="./main.js"></script>
+  </body>
+</html>

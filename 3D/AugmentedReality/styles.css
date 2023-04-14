@@ -1,0 +1,201 @@
+@import "../../assets/shared/colors.css";
+
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Mohave";
+  background-color: var(--white);
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+img, a{
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}  
+#start{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#buttonWrap{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(4vh + 4vw);
+}  
+#backBtn{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--dark);
+    border-radius: 10%;
+    margin-bottom: 10px;
+}
+#backBtn > img{
+    transform: translate(-50%,-50%) scaleX(-1);
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top:50%;
+    left: 50%;
+    margin: auto;
+    filter: invert(1);
+  }
+#start > h1{
+    color: var(--figure);
+    text-align: center;
+}
+#instructions{
+    height: 50%;
+    width: 50%;
+    transform: translateX(50%);
+}
+#instructions > h1{
+ text-align: center;
+ line-height: 2vh;
+}
+
+.container:nth-child(3){
+    margin-top: 5vh;
+    float: right;
+}
+
+.container:nth-child(2){
+    margin-top: 5vh;
+    float: left;
+}
+
+.container > div > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:calc(5vw + 5vh);
+}
+
+.container > span {
+    margin-top: 1vh;
+    text-align: center;
+    font-size: calc(1.7vh + 1.7vw);
+    display: inline-block;
+    width: 100%;
+}
+
+#instructionAnimation{
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 100px;
+    width: 200px;
+    filter: invert(1);
+}
+
+#phoneX{
+    animation: xaxis 6s ease-in-out infinite;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+#phoneY{
+    animation: yaxis 3s ease-in-out infinite;
+    height: 100%;
+}
+#cone{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    animation: xaxis_cone 6s ease-in-out infinite;
+}
+#grid{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    transform: translateY(-50%) scale(2) rotateX(60deg) rotateZ(45deg);
+    border-radius: 10px;
+}
+@keyframes xaxis{
+    0%,100%{
+        transform: translateX(130px) rotateY(45deg) rotateX(30deg) rotateZ(-20deg);
+    }
+    50%{
+        transform: translateX(-130px) rotateY(-45deg) rotateX(30deg) rotateZ(20deg);
+    }
+}
+
+@keyframes yaxis{
+    0%,100%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+}
+
+@keyframes xaxis_cone{
+    0%,100%{
+        transform: translateX(60px) translateY(-90px) rotateZ(45deg) rotateY(45deg);
+    }
+    50%{
+        transform: translateX(-60px) translateY(-90px) rotateZ(-45deg) rotateY(45deg);
+    }
+
+}
+
+#speedSlider {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    z-index: 1;
+    bottom: 0px;
+    position: absolute;
+    font-size: 3vh;
+    color: var(--white);
+    display: none;
+}
+  
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1.5vh;
+    border-radius: 8px;
+    background: #c3c3c3;
+    outline: none;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+    /* background: #03d461; */
+    background: var(--secound);
+    cursor: pointer;
+    border: 0;
+}
+  
+.slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--secound);;
+    cursor: pointer;
+    border: 0;
+}

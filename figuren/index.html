@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../assets/shared/loading.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../assets/fonts/mohave.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="loading_screen">
+      <div id="animation_frame">
+        <div class="animation_line"><div></div></div>
+        <div class="animation_line"><div></div></div>
+        <div class="animation_line"><div></div></div>
+        <div class="animation_line"><div></div></div>
+        <h3 id="loading">Laden...</h3>
+      </div>
+    </div>
+    <div id="headline">
+      <span id="tanzname">Laden...</span>
+    </div>
+    <div id="backButton" onclick="location.href = location.href.split('figuren')[0]">
+      <img src="../assets/img/arrow_right.svg">
+      <span>Zurück</span>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div id="flexContainer">
+    </div>
+    <script type="module" defer src="./main.js"></script>
+  </body>
+</html>

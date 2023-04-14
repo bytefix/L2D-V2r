@@ -1,0 +1,251 @@
+{
+    "figures": {
+        "shuffle": [
+            {
+                "number": "01",
+                "description": "Der Basic Schritt",
+                "fileName": "single.glb",
+                "animationName": "shuffle01",
+                "aiVerifiable": true,
+                "startFrame": 86,  
+                "endFrame": 170
+            },
+            {
+                "number": "02",
+                "description": "Der Basic Schritt überkreuz",
+                "fileName": "single.glb",
+                "animationName": "shuffle02",
+                "aiVerifiable": true,
+                "startFrame": 27,
+                "endFrame": 158
+            },
+            {
+                "number": "03",
+                "description": "Der Basic Schritt 180° Drehung",
+                "fileName": "single.glb",
+                "animationName": "shuffle03",
+                "aiVerifiable": true,
+                "startFrame": 113,  
+                "endFrame": 226
+            },
+            {
+                "number": "04",
+                "description": "Charleston",
+                "fileName": "single.glb",
+                "animationName": "shuffle04",
+                "aiVerifiable": true,
+                "startFrame": 190,  
+                "endFrame": 245
+            },
+            {
+                "number": "05",
+                "description": "Side Kick",
+                "fileName": "single.glb",
+                "animationName": "shuffle05",
+                "aiVerifiable": true,
+                "startFrame": 0,  
+                "endFrame": 117
+            }
+        ],
+        "debug": [
+            {
+                "number": "01",
+                "description": "brain - brain_tex.jpg fehlt? Textur?",
+                "fileName": "brain.glb",
+                "aiVerifiable": false
+            },
+            {
+                "number": "02",
+                "description": "mittel - 16,7mb",
+                "fileName": "walk.glb",
+                "aiVerifiable": false
+            },
+            {
+                "number": "03",
+                "description": "groß - 30mb",
+                "fileName": "room.glb",
+                "aiVerifiable": false
+            },
+            {
+                "number": "04",
+                "description": "Audi R8",
+                "fileName": "audi.glb",
+                "aiVerifiable": false
+            },
+            {
+                "number": "05",
+                "description": "<span style='color: #FF00FF;'>Hund #FF00FF</span>",
+                "fileName": "Hund.glb",
+                "aiVerifiable": false
+            },
+            {
+                "number": "99",
+                "description": "Tpose mixamo glb",
+                "fileName": "YBot.glb",
+                "aiVerifiable": true,
+                "startFrame": 0,  
+                "endFrame": 0
+            }
+        ],
+        "mj": [
+            {
+                "number": "01",
+                "description": "Der Moonwalk - Der Klassiker",
+                "fileName": "single.glb",
+                "animationName": "mj01",
+                "aiVerifiable": false
+            },
+            {
+                "number": "02",
+                "description": "Der Sidewalk",
+                "fileName": "single.glb",
+                "animationName": "mj02",
+                "aiVerifiable": false
+            },
+            {
+                "number": "03",
+                "description": "Der Sidewalk auf der Stelle gedreht",
+                "fileName": "single.glb",
+                "animationName": "mj03",
+                "aiVerifiable": true,
+                "startFrame": 19,
+                "endFrame": 278
+            }
+        ],
+        "extra":[
+            {
+                "number": "01",
+                "description": "🐝 Biene (Quelle: MS 3D Viewer)",
+                "scale": "0.01",
+                "fileName": "bee.glb",
+                "aiVerifiable": false
+            },
+            {
+                "number": "02",
+                "description": "🎈 Heißluftballons (Quelle: MS 3D Viewer)",
+                "scale": "2",
+                "fileName": "balloons.glb",
+                "aiVerifiable": false
+            },
+            {
+                "number": "03",
+                "description": "🍔 Cheeseburger (Quelle: MS 3D Viewer)",
+                "scale": "2.5",
+                "fileName": "cheeseburger.glb",
+                "aiVerifiable": false
+            },
+            {
+                "number": "04",
+                "description": "🫀 Schlagendes menschliches Herz (Quelle: MS 3D Viewer)",
+                "scale": "8",
+                "fileName": "heart.glb",
+                "aiVerifiable": false
+            },
+            {
+                "number": "05",
+                "description": "🦴 Menschliches Skelett (Quelle: MS 3D Viewer)",
+                "scale": "1",
+                "fileName": "skeleton.glb",
+                "aiVerifiable": false
+            },
+            {
+                "number": "06",
+                "description": "🚀 Mars-Rover Curiosity (Quelle: MS 3D Viewer)",
+                "scale": "0.9",
+                "fileName": "marsrover.glb",
+                "aiVerifiable": false
+            },
+            {
+                "number": "07",
+                "description": "🚗 Zerstörtes Auto (Quelle: MS 3D Viewer)",
+                "scale": "0.1",
+                "fileName": "auto.glb",
+                "aiVerifiable": false
+            }
+        ],
+        "ar":[
+            {
+                "number": "0",
+                "description": "cursor",
+                "fileName": "animArr.glb",
+                "aiVerifiable": false
+            }
+        ],
+        "hiphop": [
+            {
+                "number": "01",
+                "description": "Kick-Ball-Change",
+                "fileName": "single.glb",
+                "animationName": "hiphop01",
+                "aiVerifiable": true,
+                "startFrame": 106,
+                "endFrame": 231
+            },
+            {
+                "number": "02",
+                "description": "Kick-Ball-Change zur Seite",
+                "fileName": "single.glb",
+                "animationName": "hiphop02",
+                "aiVerifiable": true,
+                "startFrame": 29,
+                "endFrame": 86
+            },
+            {
+                "number": "03",
+                "description": "Pas de bourré",
+                "fileName": "single.glb",
+                "animationName": "hiphop03",
+                "aiVerifiable": true,
+                "startFrame": 32,
+                "endFrame": 224
+            },
+            {
+                "number": "04",
+                "description": "Slide",
+                "fileName": "single.glb",
+                "animationName": "hiphop04",
+                "aiVerifiable": true,
+                "startFrame": 0,
+                "endFrame": 63
+            },
+            {
+                "number": "05",
+                "description": "2-Step (wide)",
+                "fileName": "single.glb",
+                "animationName": "hiphop05",
+                "aiVerifiable": true,
+                "startFrame": 2,
+                "endFrame": 190
+            },
+            {
+                "number": "06",
+                "description": "Dance-Hall Alf",
+                "fileName": "single.glb",
+                "animationName": "hiphop06",
+                "aiVerifiable": true,
+                "startFrame": 73,
+                "endFrame": 191
+            },
+            {
+                "number": "07",
+                "description": "Kreuz-Drehung",
+                "fileName": "single.glb",
+                "animationName": "hiphop07",
+                "aiVerifiable": true,
+                "startFrame": 69,
+                "endFrame": 130
+            }
+        ]
+    },
+
+    "paths": {
+        "mainFolder": "../assets/glb/figures",
+        "mainFolderED": "../../assets/glb/figures",
+        "debug": "/debug",
+        "shuffle": "/dance",
+        "hiphop": "/dance",
+        "mj": "/dance",
+        "ar": "/ar",
+        "extra": "/extra"
+    }
+}
